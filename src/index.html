@@ -3,12 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="index.css">
     <title>Leaderboard</title>
 </head>
 <body>
     <div id="leaderboard">
-        <h1> Leaderboard!</h1>
+        <h1> Highscore Leaderboard </h1>
+    </div>
+    <div class="score-container">
+        <div class="leaderboard">
+            <div class="leaderboard-title">
+                <h2>Recent scores</h2>
+                <button class="refresh">Refresh</button>
+            </div>
+            <ul class="recent-scores">
+
+            </ul>
+        </div>
+        <div class="add-score">
+            <h2>Add your score</h2>
+            <form class="container">
+                <input type="text" id="name" placeholder="Add your name..." autocomplete="off">
+                <input type="number" id="score" placeholder="Add your score..." autocomplete="off">
+                <button class="add">Add score</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>

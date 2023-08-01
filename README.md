@@ -27,9 +27,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 To-Do List <a name="about-project"></a>
+# 🕹️ Leaderboard with APIS <a name="about-project"></a>
 
-"To-do list" is a tool that helps to organize anyone's day. A simple list adding and removing things to do. This website builds a "To-Do" list using ES6 and Webpack!
+As much as we'd love to ship a fully fledged game for you to add scores, currently this website shows a Leaderboard of random scores and names! Be sure to add your own! The name and score can be anything.
 
 ## 🛠 Built With <a name="built-with"></a>
 
