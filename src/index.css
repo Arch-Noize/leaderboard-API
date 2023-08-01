@@ -5,6 +5,7 @@
 * {
   box-sizing: border-box;
   font-family: 'Varela Round', 'Times New Roman', Times, serif;
+  font-weight: 600;
 }
 
 button {
@@ -29,7 +30,29 @@ input::placeholder {
   font-style: italic;
 }
 
+ul {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+
+li {
+  padding: 0.3em;
+  justify-content: flex-start;
+}
+
+li:nth-child(odd) {
+  background-color: #c2c1c1;
+}
+
 /* Containers */
+
+.leaderboard-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+}
 
 .score-container {
   display: flex;
@@ -40,10 +63,14 @@ input::placeholder {
   justify-content: space-evenly;
 }
 
-.recent-scores {
+.leaderboard {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 20px;
+}
+
+.add {
+  align-self: flex-end;
 }
 
 .container {
@@ -53,6 +80,8 @@ input::placeholder {
   gap: 15px;
 }
 
-.add {
-  align-self: flex-end;
+.recent-scores{
+  margin: 0;
+  border: 2px solid black;
 }
+
