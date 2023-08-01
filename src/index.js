@@ -33,9 +33,9 @@ const displayScore = () => {
     <li class="score">
       ${item.user}: ${item.score}
     </li>
-    `
-  })
-}
+    `;
+  });
+};
 
 window.addEventListener('DOMContentLoaded', displayScore);
 
