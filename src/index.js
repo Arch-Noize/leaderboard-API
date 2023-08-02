@@ -1,50 +1,27 @@
-// import { score , storeScore } from './modules/storage';
+import { getScores, addScores } from './modules/game-api.js';
 import './index.css';
-
-const leaderboard = [
-  {
-    user: 'Jame',
-    score: '1450',
-  },
-  {
-    user: 'Oreo',
-    score: '1234',
-  },
-  {
-    user: 'Z',
-    score: '0000',
-  },
-  {
-    user: 'CJ',
-    score: '3190',
-  },
-  {
-    user: 'San',
-    score: '999',
-  },
-];
 
 const scores = document.querySelector('.recent-scores');
 const addBtn = document.querySelector('.add');
+const refresh = document.querySelector('.refresh');
+const form = document.querySelector("#new-score");
 
-const displayScore = () => {
+refresh.addEventListener('click', async () => {
+  scores.innerHTML = '';
+  const leaderboard = await getScores();
   leaderboard.forEach((item) => {
-    scores.innerHTML += `
-    <li class="score">
-      ${item.user}: ${item.score}
-    </li>
-    `;
+    scores.innerHTML += `<li class="score">${item.user}: ${item.score}</li>`
   });
-};
+})
 
-window.addEventListener('DOMContentLoaded', displayScore);
-
-addBtn.addEventListener('click', (e) => {
+addBtn.addEventListener('click', async (e) => {
   e.preventDefault();
   const newScore = document.querySelector('#score').value;
-  if (!newScore) {
+  const username = document.querySelector('#name').value;
+  if (!newScore || !username) {
     e.preventDefault();
   } else {
-    console.log(newScore);
+    await addScores (username, newScore);
+    form.reset();
   }
 });
