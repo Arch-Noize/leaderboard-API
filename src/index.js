@@ -11,7 +11,7 @@ const displayScores = async () => {
   leaderboard.forEach((item) => {
     scores.innerHTML += `<li class="score">${item.user}: ${item.score}</li>`;
   });
-}
+};
 
 refresh.addEventListener('click', () => {
   scores.innerHTML = '';
